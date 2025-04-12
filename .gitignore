@@ -1,4 +1,7 @@
-nvim/*/tags
-nvim/*/test.sh
-nvim/*/.luarc.json
-nvim/*/spell/
+nvim/**/tags
+nvim/**/test.sh
+nvim/**/.luarc.json
+nvim/**/spell/
+
+karabiner/**/assets
+karabiner/**/automatic_backups
