@@ -1,0 +1,11 @@
+theme = zenbones
+font-family = "FiraCode Nerd Font"
+font-size = 16
+font-thicken = true
+
+cursor-style = bar
+cursor-style-blink = true
+shell-integration-features = no-cursor
+mouse-hide-while-typing = true
+
+keybind = ctrl+alt+shift+n=reload_config
