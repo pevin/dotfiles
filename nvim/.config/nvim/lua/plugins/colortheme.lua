@@ -7,7 +7,7 @@ return {
       highlight_groups = {
         CurSearch = { fg = 'base', bg = 'leaf', inherit = false },
         Search = { fg = 'text', bg = 'leaf', blend = 20, inherit = false },
-        Cursor = { bg = '#797593' },
+        Cursor = { bg = 'rose' },
         IndentBlanklineContextChar = { fg = 'love' },
 
         NonText = { fg = 'highlight_high' },
