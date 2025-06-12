@@ -34,6 +34,7 @@ return { -- Highlight, edit, and navigate codetree
       'html',
       'slim',
       'd2',
+      'idl',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
