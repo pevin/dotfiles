@@ -4,6 +4,9 @@ return {
     'ThePrimeagen/vim-be-good',
   },
   {
+    'schickling/vim-bufonly',
+  },
+  {
     -- Tmux & split window navigation
     'christoomey/vim-tmux-navigator',
   },
