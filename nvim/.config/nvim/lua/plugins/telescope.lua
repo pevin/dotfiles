@@ -57,14 +57,15 @@ return {
             preview_width = 0.4,
           },
         },
-        -- path_display = {
-        --   'shorten',
-        -- },
+        path_display = {
+          'truncate',
+        },
         mappings = {
           i = {
             -- ['<C-k>'] = actions.move_selection_previous, -- move to prev result
             -- ['<C-j>'] = actions.move_selection_next, -- move to next result
             ['<C-y>'] = actions.select_default, -- open file
+            ['<C-e>'] = actions.select_default, -- open file
             ['<esc>'] = actions.close,
           },
         },
