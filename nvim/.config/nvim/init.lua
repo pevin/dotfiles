@@ -40,6 +40,7 @@ require('lazy').setup {
   require 'plugins.formatter',
   require 'plugins.neogit',
   require 'plugins.vim-test',
+  -- require 'plugins.bufonly',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
