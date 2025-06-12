@@ -13,8 +13,10 @@ return {
     local neogit = require 'neogit'
     neogit.setup {}
     local open_neogit = function()
-      neogit.open { kind = 'floating' }
+      neogit.open { kind = 'replace' }
     end
     vim.keymap.set('n', '<leader>gn', open_neogit, { desc = '[G]it show [N]eogit' })
+    vim.keymap.set('n', '<leader>gd', '<cmd> DiffviewOpen <CR>', { desc = '[G]it [D]iff view open' })
+    vim.keymap.set('n', '<leader>gx', '<cmd> DiffviewClose <CR>', { desc = '[G]it Diff view Close (x)' })
   end,
 }
