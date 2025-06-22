@@ -13,6 +13,7 @@ local opts = { noremap = true, silent = true }
 
 -- save file
 vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
+vim.keymap.set('i', '<C-s>', '<esc><cmd> w <CR>', opts)
 vim.keymap.set('n', '<leader>S', '<cmd> w <CR>', opts) -- alternative saving when shift is more accessible than crtl
 
 -- save file without auto-formatting
