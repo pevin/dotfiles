@@ -38,15 +38,16 @@ return {
       symbols = { added = ' ', modified = ' ', removed = ' ' }, -- changes diff symbols
       cond = hide_in_width,
     }
-    local custom_theme = require 'lualine.themes.rose-pine'
-
-    custom_theme.normal.a.bg = '#797593'
-    custom_theme.normal.b.fg = '#797593'
+    -- local custom_theme = require 'lualine.themes.rose-pine'
+    --
+    -- custom_theme.normal.a.bg = '#797593'
+    -- custom_theme.normal.b.fg = '#797593'
 
     require('lualine').setup {
       options = {
         icons_enabled = true,
-        theme = custom_theme, -- Set theme based on environment variable
+        theme = 'nordfox', -- Set theme based on environment variable
+        -- theme = custom_theme, -- Set theme based on environment variable
         -- Some useful glyphs:
         -- https://www.nerdfonts.com/cheat-sheet
         --        
