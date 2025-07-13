@@ -127,12 +127,20 @@ return {
     vim.keymap.set('n', '<leader>sy', builtin.builtin, { desc = '[S]earch select telescope (y)' })
     vim.keymap.set('n', '<leader>si', builtin.grep_string, { desc = '[S]earch current word (i)' })
     vim.keymap.set('n', '<leader>se', function()
-      require('telescope').extensions.live_grep_args.live_grep_args {
+      telescope.extensions.live_grep_args.live_grep_args {
         additional_args = function()
           return { '--hidden' }
         end,
       }
     end, { desc = '[S]earch by gr[E]p' })
+    local live_grep_args_shortcuts = require 'telescope-live-grep-args.shortcuts'
+    vim.keymap.set('v', '<leader>s', function()
+      live_grep_args_shortcuts.grep_visual_selection {
+        additional_args = function()
+          return { '--hidden' }
+        end,
+      }
+    end, { desc = '[S]earch selected' })
     vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
     vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
     vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
