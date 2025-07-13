@@ -120,13 +120,12 @@ return {
 
     -- See `:help telescope.builtin`
     local builtin = require 'telescope.builtin'
-    vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
+    vim.keymap.set('n', '<leader>s?', builtin.help_tags, { desc = '[S]earch help (?)' })
+    vim.keymap.set('n', '<leader>sh', builtin.find_files, { desc = '[S]earch files (h)' }) -- easy acess
     vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
     vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
-    vim.keymap.set('n', '<leader>sa', builtin.find_files, { desc = '[S]earch [F]iles (a)' }) -- easy access
-    vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
-    vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
-    -- vim.keymap.set('n', '<leader>se', ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", { desc = '[S]earch by gr[E]p' })
+    vim.keymap.set('n', '<leader>sy', builtin.builtin, { desc = '[S]earch select telescope (y)' })
+    vim.keymap.set('n', '<leader>si', builtin.grep_string, { desc = '[S]earch current word (i)' })
     vim.keymap.set('n', '<leader>se', function()
       require('telescope').extensions.live_grep_args.live_grep_args {
         additional_args = function()
@@ -134,7 +133,6 @@ return {
         end,
       }
     end, { desc = '[S]earch by gr[E]p' })
-    -- vim.keymap.set('n', '<leader>se', builtin.live_grep, { desc = '[S]earch by gr[E]p' })
     vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
     vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
     vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
