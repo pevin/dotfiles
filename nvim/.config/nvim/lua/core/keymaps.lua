@@ -90,6 +90,6 @@ vim.keymap.set('n', '<leader>Q', ':qa<CR>', { silent = true, desc = 'Quit neovim
 -- vim.keymap.set('n', '<leader>gg', ':Git<CR>')
 -- vim.keymap.set('n', '<leader>gP', ':Git push<CR>', { desc = '[G]it [P]ush' })
 -- vim.keymap.set('n', '<leader>gp', ':Git pull<CR>', { desc = '[G]it [p]ull' })
--- vim.keymap.set('n', '<leader>gb', ':Git blame<CR>', { desc = '[G]it [b]lame' })
+vim.keymap.set('n', '<leader>gb', ':Git blame<CR>', { desc = '[G]it [b]lame' })
 -- vim.keymap.set('n', '<leader>gc', ':Git checkout ', { desc = '[G]it [c]heckout existing branch' })
 -- vim.keymap.set('n', '<leader>gn', ':Git checkout -b ', { desc = '[G]it checkout [n]ew branch' })
