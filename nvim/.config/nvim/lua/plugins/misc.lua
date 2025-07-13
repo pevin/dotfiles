@@ -1,6 +1,18 @@
 -- Standalone plugins with less than 10 lines of config go here
 return {
   {
+    'vim-ruby/vim-ruby',
+  },
+  {
+    'tpope/vim-rails',
+  },
+  {
+    'tpope/vim-rake',
+  },
+  {
+    'tpope/vim-endwise',
+  },
+  {
     'ThePrimeagen/vim-be-good',
   },
   {
