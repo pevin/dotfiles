@@ -176,7 +176,11 @@ return {
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      ts_ls = {}, -- tsserver is deprecated
+      ts_ls = {
+        init_options = {
+          provideFormatter = false,
+        },
+      },
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       cssls = {},
       tailwindcss = {},
