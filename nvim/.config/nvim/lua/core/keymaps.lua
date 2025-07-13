@@ -50,7 +50,7 @@ vim.keymap.set('n', '<leader>bx', '<cmd> BufOnly<CR>', { noremap = true, silent 
 vim.keymap.set('n', '<leader>wl', '<C-w>v', opts) -- split window vertically
 vim.keymap.set('n', '<leader>wh', '<C-w>s', opts) -- split window horizontally
 vim.keymap.set('n', '<leader>we', '<C-w>=', opts) -- make split windows equal width & height
-vim.keymap.set('n', '<leader>wx', ':close<CR>', opts) -- close current split window
+vim.keymap.set('n', '<leader>wc', ':close<CR>', opts) -- close current split window
 
 -- Navigate between splits
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>', opts)
