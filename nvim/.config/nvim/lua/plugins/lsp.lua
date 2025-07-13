@@ -151,21 +151,6 @@ return {
     --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
-    local lspconfig = require 'lspconfig'
-    lspconfig.solargraph.setup {
-      formatting = false,
-      settings = {
-        solargraph = {
-          autoformat = false,
-          completion = true,
-          diagnostic = true,
-          folding = true,
-          references = true,
-          rename = true,
-          symbols = true,
-        },
-      },
-    }
     local servers = {
       -- clangd = {},
       -- pyright = {},
@@ -197,40 +182,12 @@ return {
       --     formatter = 'auto',
       --   },
       -- },
-      solargraph = {
-        -- cmd = { os.getenv 'HOME' .. '/.rbenv/shims/solargraph', 'stdio' },
-        -- root_dir = lspconfig.util.root_pattern('Gemfile', '.git', '.'),
-        settings = {
-          solargraph = {
-            autoformat = false,
-            completion = true,
-            diagnostic = true,
-            folding = true,
-            references = true,
-            rename = true,
-            symbols = true,
-          },
-        },
+      ruby_lsp = {
+        cmd = { os.getenv 'HOME' .. '/.rbenv/shims/ruby-lsp' },
+        filetypes = { 'ruby' },
+        formatter = 'none',
       },
-      -- ruby_lsp = {
-      --   -- cmd_env = { bundle_gemfile = vim.fn.getenv 'global_gemfile' },
-      --   cmd = { os.getenv 'HOME' .. '/.rbenv/shims/ruby-lsp' },
-      --   root_dir = lspconfig.util.root_pattern('Gemfile', '.git', '.'),
-      --   filetypes = { 'ruby' },
-      --   -- root_dir = function(fname)
-      --   --   return require('lspconfig').util.root_pattern('Gemfile', '.git')(fname) or vim.fn.getcwd()
-      --   -- end,
-      --   formatter = 'none',
-      -- },
-      -- rubocop = {
-      --   -- See: https://docs.rubocop.org/rubocop/usage/lsp.html
-      --   cmd = { 'bundle', 'exec', 'rubocop', '--lsp' },
-      --   root_dir = lspconfig.util.root_pattern('Gemfile', '.git', '.'),
-      -- },
       lua_ls = {
-        -- cmd = {...},
-        -- filetypes = { ...},
-        -- capabilities = {},
         settings = {
           Lua = {
             completion = {
