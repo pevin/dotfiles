@@ -123,9 +123,8 @@ return {
     vim.keymap.set('n', '<leader>s?', builtin.help_tags, { desc = '[S]earch help (?)' })
     vim.keymap.set('n', '<leader>sh', builtin.find_files, { desc = '[S]earch files (h)' }) -- easy acess
     vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-    vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
     vim.keymap.set('n', '<leader>sy', builtin.builtin, { desc = '[S]earch select telescope (y)' })
-    vim.keymap.set('n', '<leader>si', builtin.grep_string, { desc = '[S]earch current word (i)' })
+    vim.keymap.set('n', '<leader>sa', builtin.grep_string, { desc = '[S]earch current word (a)' })
     vim.keymap.set('n', '<leader>se', function()
       telescope.extensions.live_grep_args.live_grep_args {
         additional_args = function()
