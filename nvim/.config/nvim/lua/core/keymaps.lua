@@ -13,8 +13,6 @@ vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
 vim.keymap.set('i', '<C-s>', '<esc><cmd> w <CR>', opts)
 vim.keymap.set('n', '<leader>S', '<cmd> w <CR>', opts) -- alternative saving when shift is more accessible than crtl
 
--- save file without auto-formatting
-vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
 -- clipboard
 vim.keymap.set('n', '<leader>yp', "<cmd>let @+ = expand('%')<CR>", { silent = true, desc = 'Yank relative file path' })
 vim.keymap.set('n', '<leader>yc', '"+y', { silent = true, desc = 'Yank to clipboard' })
