@@ -5,9 +5,6 @@ vim.g.maplocalleader = ' '
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- Save relative file path to clipboard
-vim.keymap.set({ 'n' }, '<leader>fy', "<cmd>let @+ = expand('%')<CR>", { silent = true, desc = 'Yank relative file path' })
-
 -- For conciseness
 local opts = { noremap = true, silent = true }
 
@@ -18,6 +15,11 @@ vim.keymap.set('n', '<leader>S', '<cmd> w <CR>', opts) -- alternative saving whe
 
 -- save file without auto-formatting
 vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
+-- clipboard
+vim.keymap.set('n', '<leader>yp', "<cmd>let @+ = expand('%')<CR>", { silent = true, desc = 'Yank relative file path' })
+vim.keymap.set('n', '<leader>yc', '"+y', { silent = true, desc = 'Yank to clipboard' })
+vim.keymap.set('n', '<leader>yd', '"+d', { silent = true, desc = 'Delete + yank to clipboard' })
+vim.keymap.set('n', '<leader>p', '"+p', { silent = true, desc = 'Paste from clipboard' })
 
 -- quit file
 vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
