@@ -13,11 +13,19 @@ vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
 vim.keymap.set('i', '<C-s>', '<esc><cmd> w <CR>', opts)
 vim.keymap.set('n', '<leader>S', '<cmd> w <CR>', opts) -- alternative saving when shift is more accessible than crtl
 
+-- paste on insert mode
+vim.keymap.set('i', '<C-v>', '<C-r>+', { noremap = true, silent = true })
+
 -- clipboard
 vim.keymap.set('n', '<leader>yp', "<cmd>let @+ = expand('%')<CR>", { silent = true, desc = 'Yank relative file path' })
 vim.keymap.set('n', '<leader>yc', '"+y', { silent = true, desc = 'Yank to clipboard' })
 vim.keymap.set('n', '<leader>yd', '"+d', { silent = true, desc = 'Delete + yank to clipboard' })
-vim.keymap.set('n', '<leader>p', '"+p', { silent = true, desc = 'Paste from clipboard' })
+vim.keymap.set('n', '<leader>p', '"+p', { silent = true, desc = 'Paste from clipboard (after cursor)' })
+vim.keymap.set('n', '<leader>P', '"+P', { silent = true, desc = 'Paste from clipboard (before cursor)' })
+vim.keymap.set('v', '<leader>y', '"+y', { silent = true, desc = 'Yank to clipboard' })
+vim.keymap.set('v', '<leader>p', '"+p', { silent = true, desc = 'Paste from clipboard (after cursor)' })
+vim.keymap.set('n', '<leader>P', '"+P', { silent = true, desc = 'Paste from clipboard (before cursor)' })
+vim.keymap.set('v', '<leader>P', '"+P', { silent = true, desc = 'Paste from clipboard (before cursor)' })
 
 -- quit file
 vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
@@ -91,5 +99,9 @@ vim.keymap.set('n', '<leader>Q', ':qa<CR>', { silent = true, desc = 'Quit neovim
 -- vim.keymap.set('n', '<leader>gP', ':Git push<CR>', { desc = '[G]it [P]ush' })
 -- vim.keymap.set('n', '<leader>gp', ':Git pull<CR>', { desc = '[G]it [p]ull' })
 vim.keymap.set('n', '<leader>gb', ':Git blame<CR>', { desc = '[G]it [b]lame' })
+vim.keymap.set('n', '<leader>go', ':GBrowse<CR>', { desc = '[G]it [o]pen in browser' })
+vim.keymap.set('x', '<leader>go', ':GBrowse<CR>', { desc = '[G]it [o]pen in browser' })
+vim.keymap.set('n', '<leader>gy', ':GBrowse!<CR>', { desc = '[G]it [y]ank in link to clipboard' })
+vim.keymap.set('x', '<leader>gy', ':GBrowse!<CR>', { desc = '[G]it [y]ank in link to clipboard' })
 -- vim.keymap.set('n', '<leader>gc', ':Git checkout ', { desc = '[G]it [c]heckout existing branch' })
 -- vim.keymap.set('n', '<leader>gn', ':Git checkout -b ', { desc = '[G]it checkout [n]ew branch' })
