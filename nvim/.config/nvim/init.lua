@@ -35,7 +35,6 @@ require('lazy').setup {
   -- require 'plugins.sneak',
   require 'plugins.ufo',
   require 'plugins.session',
-  require 'plugins.gitlink',
   require 'plugins.oil',
   require 'plugins.formatter',
   require 'plugins.neogit',
