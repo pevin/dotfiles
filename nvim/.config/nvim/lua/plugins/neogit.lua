@@ -11,7 +11,19 @@ return {
   },
   config = function()
     local neogit = require 'neogit'
-    neogit.setup {}
+    neogit.setup {
+      mappings = {
+        rebase_editor = {
+          ["<c-e>"] = "OpenCommit",
+        },
+        finder = {
+          ["<c-e>"] = "Select",
+        },
+        status = {
+          ["<c-e>"] = "GoToFile",
+        },
+      }
+    }
     local open_neogit = function()
       neogit.open { kind = 'replace' }
     end
