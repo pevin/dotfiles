@@ -9,9 +9,10 @@ return {
         transparent = false, -- set to true if you want a transparent background
         terminal_colors = true,
         styles = {
-          comments = 'italic',
-          keywords = 'bold',
-          types = 'italic,bold',
+          -- comments = 'italic',
+          -- types = 'italic',
+          -- keywords = 'bold',
+          -- types = 'italic,bold',
         },
       },
     }
