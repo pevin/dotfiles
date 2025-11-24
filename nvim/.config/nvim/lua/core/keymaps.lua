@@ -51,14 +51,15 @@ vim.keymap.set('n', '<Right>', ':vertical resize +2<CR>', opts)
 vim.keymap.set('n', '<Tab>', ':bnext<CR>', opts)
 vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', opts)
 vim.keymap.set('n', '<leader>x', ':Bdelete<CR>', { noremap = true, silent = true, desc = 'Close buffer' })
+vim.keymap.set('n', '<leader>X', ':<C-U>bprevious <bar> bdelete! #<CR>', { noremap = true, silent = true, desc = 'Force close buffer' })
 vim.keymap.set('n', '<leader>bn', '<cmd> enew <CR>', { noremap = true, silent = true, desc = 'New buffer' })
-vim.keymap.set('n', '<leader>bc', '<cmd> BufOnly<CR>', { noremap = true, silent = true, desc = 'Close all other buffers' })
+vim.keymap.set('n', '<leader>bx', '<cmd> BufOnly<CR>', { noremap = true, silent = true, desc = 'Close all other buffers' })
 
 -- Window management
 vim.keymap.set('n', '<leader>wl', '<C-w>v', opts) -- split window vertically
 vim.keymap.set('n', '<leader>wh', '<C-w>s', opts) -- split window horizontally
 vim.keymap.set('n', '<leader>we', '<C-w>=', opts) -- make split windows equal width & height
-vim.keymap.set('n', '<leader>wc', ':close<CR>', opts) -- close current split window
+vim.keymap.set('n', '<leader>wx', ':close<CR>', opts) -- close current split window
 
 -- Navigate between splits
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>', opts)
@@ -91,17 +92,31 @@ vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Open diag
 -- Unset last search highlight
 vim.keymap.set('n', '<Esc>', ':noh<CR>', { silent = true })
 
+-- Search current buffer using yanked text
+vim.keymap.set('n', '<leader>ss', ':let @/ = @"<CR>n', { silent = true, desc = 'Search current buffer' })
+
 -- Close Neovim
 vim.keymap.set('n', '<leader>Q', ':qa<CR>', { silent = true, desc = 'Quit neovim' })
 
 -- Git
--- vim.keymap.set('n', '<leader>gg', ':Git<CR>')
--- vim.keymap.set('n', '<leader>gP', ':Git push<CR>', { desc = '[G]it [P]ush' })
--- vim.keymap.set('n', '<leader>gp', ':Git pull<CR>', { desc = '[G]it [p]ull' })
+
+vim.api.nvim_create_user_command("Gbcommit", function()
+  local line = vim.api.nvim_get_current_line()
+  local sha = string.match(line, "^%x%x%x%x%x%x%x+")
+  if sha then
+    vim.cmd("GBrowse " .. sha)
+  else
+    print("No commit SHA found on this line.")
+  end
+end, {})
 vim.keymap.set('n', '<leader>gb', ':Git blame<CR>', { desc = '[G]it [b]lame' })
 vim.keymap.set('n', '<leader>go', ':GBrowse<CR>', { desc = '[G]it [o]pen in browser' })
 vim.keymap.set('x', '<leader>go', ':GBrowse<CR>', { desc = '[G]it [o]pen in browser' })
 vim.keymap.set('n', '<leader>gy', ':GBrowse!<CR>', { desc = '[G]it [y]ank in link to clipboard' })
 vim.keymap.set('x', '<leader>gy', ':GBrowse!<CR>', { desc = '[G]it [y]ank in link to clipboard' })
+vim.keymap.set("n", "<leader>gc", ":Gbcommit<CR>", { desc = "Open commit in browser" })
+-- vim.keymap.set('n', '<leader>gg', ':Git<CR>')
+-- vim.keymap.set('n', '<leader>gP', ':Git push<CR>', { desc = '[G]it [P]ush' })
+-- vim.keymap.set('n', '<leader>gp', ':Git pull<CR>', { desc = '[G]it [p]ull' })
 -- vim.keymap.set('n', '<leader>gc', ':Git checkout ', { desc = '[G]it [c]heckout existing branch' })
 -- vim.keymap.set('n', '<leader>gn', ':Git checkout -b ', { desc = '[G]it checkout [n]ew branch' })
