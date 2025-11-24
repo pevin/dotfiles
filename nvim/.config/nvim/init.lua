@@ -39,6 +39,7 @@ require('lazy').setup {
   require 'plugins.formatter',
   require 'plugins.neogit',
   require 'plugins.vim-test',
+  require 'plugins.supermaven',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
