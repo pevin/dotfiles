@@ -29,7 +29,7 @@ require('lazy').setup {
   require 'plugins.indent-blankline',
   require 'plugins.misc',
   require 'plugins.comment',
-  require 'plugins.toggleterm',
+  -- require 'plugins.toggleterm',
   require 'plugins.surround',
   require 'plugins.harpoon',
   -- require 'plugins.sneak',
@@ -40,6 +40,7 @@ require('lazy').setup {
   require 'plugins.neogit',
   require 'plugins.vim-test',
   require 'plugins.supermaven',
+  require 'plugins.markdown',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
