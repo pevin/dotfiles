@@ -13,6 +13,9 @@ vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
 vim.keymap.set('i', '<C-s>', '<esc><cmd> w <CR>', opts)
 vim.keymap.set('n', '<leader>S', '<cmd> w <CR>', opts) -- alternative saving when shift is more accessible than crtl
 
+-- refresh current buffer
+vim.keymap.set('n', '<leader>R', '<cmd> e! <CR>', { desc = 'Reload current buffer' })
+
 -- paste on insert mode
 vim.keymap.set('i', '<C-v>', '<C-r>+', { noremap = true, silent = true })
 
@@ -120,3 +123,6 @@ vim.keymap.set("n", "<leader>gc", ":Gbcommit<CR>", { desc = "Open commit in brow
 -- vim.keymap.set('n', '<leader>gp', ':Git pull<CR>', { desc = '[G]it [p]ull' })
 -- vim.keymap.set('n', '<leader>gc', ':Git checkout ', { desc = '[G]it [c]heckout existing branch' })
 -- vim.keymap.set('n', '<leader>gn', ':Git checkout -b ', { desc = '[G]it checkout [n]ew branch' })
+
+-- Markdown preview
+vim.keymap.set('n', '<leader>mp', ':Markview Toggle<CR>', { desc = '[M]arkdown toggle [p]review' })
