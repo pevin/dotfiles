@@ -1,0 +1,189 @@
+{
+  "actions" : [
+    {
+      "key" : "space",
+      "type" : "application",
+      "value" : "/Applications/Ghostty.app"
+    },
+    {
+      "key" : "r",
+      "type" : "application",
+      "value" : "/Applications/Cursor.app"
+    },
+    {
+      "key" : "s",
+      "type" : "application",
+      "value" : "/Users/pevin.elsenique/Applications/Slack.app"
+    },
+    {
+      "key" : "c",
+      "type" : "application",
+      "value" : "/Applications/Google Chrome.app"
+    },
+    {
+      "key" : "f",
+      "type" : "application",
+      "value" : "/System/Library/CoreServices/Finder.app"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "h",
+          "label" : "left half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/left-half"
+        },
+        {
+          "key" : "e",
+          "label" : "right half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/right-half"
+        },
+        {
+          "key" : "a",
+          "label" : "center half",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/center-half"
+        },
+        {
+          "key" : "o",
+          "label" : "center big",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/center-three-fourths"
+        },
+        {
+          "key" : "m",
+          "label" : "max",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/maximize"
+        },
+        {
+          "key" : "w",
+          "type" : "command",
+          "value" : ""
+        }
+      ],
+      "key" : "w",
+      "label" : "window",
+      "type" : "group"
+    },
+    {
+      "key" : "m",
+      "label" : "meet",
+      "type" : "url",
+      "value" : "raycast://extensions/raycast/calendar/my-schedule"
+    },
+    {
+      "key" : "n",
+      "label" : "notes",
+      "type" : "url",
+      "value" : "raycast://extensions/raycast/raycast-notes/raycast-notes"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "p",
+          "type" : "application",
+          "value" : "/Applications/Postman.app"
+        },
+        {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Applications/TablePlus.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
+        },
+        {
+          "key" : "v",
+          "type" : "application",
+          "value" : "/Applications/Vial.app"
+        }
+      ],
+      "key" : "l",
+      "label" : "launch",
+      "type" : "group"
+    },
+    {
+      "key" : "b",
+      "label" : "bookmark",
+      "type" : "url",
+      "value" : "raycast://extensions/raycast/browser-bookmarks/index"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "d",
+          "label" : "datadog",
+          "type" : "url",
+          "value" : "https://app.datadoghq.eu/logs?query=&agg_m=count&agg_m_source=base&agg_t=count&cols=host%2Cservice&fromUser=true&messageDisplay=inline&refresh_mode=sliding&storage=hot&stream_sort=desc&viz=stream&from_ts=1744099092523&to_ts=1744099992523&live=true"
+        },
+        {
+          "key" : "l",
+          "label" : "launchdarkly",
+          "type" : "url",
+          "value" : "https://app.launchdarkly.com/projects/default/flags?env=production&env=development&env=staging&env=development&selected-env=development&te3czusldwvxzpp26vmeg7mywq=Pk-SbseuJo8La1X3npGBeeWt4nCBaE-AgOec_LMvQEFw-7nyh_ha8WDdfLdkxd6zhhk66ntU"
+        },
+        {
+          "key" : "c",
+          "label" : "calendar",
+          "type" : "url",
+          "value" : "https://calendar.google.com/calendar/u/0/r"
+        }
+      ],
+      "key" : "o",
+      "label" : "open",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "h",
+          "label" : "25 mins timer",
+          "type" : "url",
+          "value" : "shortcuts://run-shortcut?name=25%20mins%20timer"
+        },
+        {
+          "key" : "a",
+          "label" : "15 mins timer",
+          "type" : "url",
+          "value" : "shortcuts://run-shortcut?name=15%20mins%20timer"
+        },
+        {
+          "key" : "e",
+          "label" : "10 mins timer",
+          "type" : "url",
+          "value" : "shortcuts://run-shortcut?name=10%20mins%20timer"
+        },
+        {
+          "key" : "i",
+          "label" : "5 mins timer",
+          "type" : "url",
+          "value" : "shortcuts://run-shortcut?name=5%20mins%20timer"
+        },
+        {
+          "key" : "f",
+          "label" : "30 mins timer",
+          "type" : "url",
+          "value" : "shortcuts://run-shortcut?name=30%20mins%20timer"
+        }
+      ],
+      "key" : "t",
+      "label" : "timer",
+      "type" : "group"
+    },
+    {
+      "key" : "/",
+      "type" : "application",
+      "value" : "/Applications/Leader Key.app"
+    },
+    {
+      "key" : "p",
+      "type" : "application",
+      "value" : "/Applications/1Password.app"
+    }
+  ],
+  "type" : "group"
+}
