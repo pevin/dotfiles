@@ -4,6 +4,53 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "esc to leaderkey",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "escape" },
+                                "to": [
+                                    {
+                                        "key_code": "s",
+                                        "modifiers": ["left_shift", "left_alt", "left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "2. Caps Lock to Escape",
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "3. ctrl to capslock",
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "caps_lock" }],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "right cmd + space to leaderkey",
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": { "mandatory": ["right_command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "s",
+                                        "modifiers": ["left_shift", "left_alt", "left_control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Remap Ctrl+W to Option+Backspace (except Ghostty)",
                         "manipulators": [
                             {
@@ -16,7 +63,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "w",
+                                    "key_code": "r",
                                     "modifiers": {
                                         "mandatory": ["control"],
                                         "optional": ["any"]
@@ -28,6 +75,44 @@
                                         "modifiers": ["option"]
                                     }
                                 ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Spacebar to Control when held, Space when tapped",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_control" }],
+                                "to_if_alone": [{ "key_code": "spacebar" }],
+                                "to_if_held_down": [{ "key_code": "left_control" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Akimbo cmd to meta s",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "simultaneous": [
+                                        { "key_code": "left_command" },
+                                        { "key_code": "right_command" }
+                                    ],
+                                    "simultaneous_options": {
+                                        "to_after_key_up": [
+                                            {
+                                                "key_code": "s",
+                                                "modifiers": ["left_shift", "left_alt", "left_control"]
+                                            }
+                                        ]
+                                    }
+                                },
+                                "to": [{ "key_code": "vk_none" }],
                                 "type": "basic"
                             }
                         ]
@@ -355,19 +440,31 @@
                         },
                         {
                             "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_command" }]
+                            "to": [
+                                { "sticky_modifier": { "left_command": "toggle" } },
+                                { "key_code": "left_command" }
+                            ]
+                        },
+                        {
+                            "from": { "key_code": "left_shift" },
+                            "to": [
+                                { "sticky_modifier": { "left_shift": "toggle" } },
+                                { "key_code": "left_shift" }
+                            ]
                         },
                         {
                             "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "right_command" }]
+                            "to": [
+                                { "sticky_modifier": { "right_command": "toggle" } },
+                                { "key_code": "right_command" }
+                            ]
                         },
                         {
-                            "from": { "key_code": "caps_lock" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "key_code": "caps_lock" }]
+                            "from": { "key_code": "right_shift" },
+                            "to": [
+                                { "sticky_modifier": { "right_shift": "toggle" } },
+                                { "key_code": "right_shift" }
+                            ]
                         }
                     ]
                 },
@@ -402,6 +499,29 @@
                         {
                             "from": { "key_code": "left_control" },
                             "to": [{ "key_code": "caps_lock" }]
+                        }
+                    ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 833,
+                        "vendor_id": 1452
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "left_shift" },
+                            "to": [
+                                { "sticky_modifier": { "left_shift": "toggle" } },
+                                { "key_code": "left_shift" }
+                            ]
+                        },
+                        {
+                            "from": { "key_code": "right_shift" },
+                            "to": [
+                                { "sticky_modifier": { "right_shift": "toggle" } },
+                                { "key_code": "right_shift" }
+                            ]
                         }
                     ]
                 }
