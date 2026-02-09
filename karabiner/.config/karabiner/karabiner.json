@@ -553,7 +553,21 @@
                         },
                         {
                             "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "left_command" }]
+                            "to": [{ "key_code": "right_command" }]
+                        },
+                        {
+                            "from": { "key_code": "left_shift" },
+                            "to": [
+                                { "sticky_modifier": { "left_shift": "toggle" } },
+                                { "key_code": "left_shift" }
+                            ]
+                        },
+                        {
+                            "from": { "key_code": "right_shift" },
+                            "to": [
+                                { "sticky_modifier": { "right_shift": "toggle" } },
+                                { "key_code": "right_shift" }
+                            ]
                         }
                     ]
                 },
@@ -561,12 +575,18 @@
                     "identifiers": { "is_keyboard": true },
                     "simple_modifications": [
                         {
-                            "from": { "key_code": "caps_lock" },
-                            "to": [{ "key_code": "left_control" }]
+                            "from": { "key_code": "left_shift" },
+                            "to": [
+                                { "sticky_modifier": { "left_shift": "toggle" } },
+                                { "key_code": "left_shift" }
+                            ]
                         },
                         {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "key_code": "caps_lock" }]
+                            "from": { "key_code": "right_shift" },
+                            "to": [
+                                { "sticky_modifier": { "right_shift": "toggle" } },
+                                { "key_code": "right_shift" }
+                            ]
                         }
                     ]
                 },
