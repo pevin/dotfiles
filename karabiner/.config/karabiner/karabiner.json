@@ -7,6 +7,12 @@
                         "description": "esc to leaderkey",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "vendor_id": 49835 }],
+                                        "type": "device_unless"
+                                    }
+                                ],
                                 "from": { "key_code": "escape" },
                                 "to": [
                                     {
@@ -17,6 +23,12 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "vendor_id": 49835 }],
+                                        "type": "device_unless"
+                                    }
+                                ],
                                 "description": "2. Caps Lock to Escape",
                                 "from": {
                                     "key_code": "caps_lock",
@@ -26,6 +38,12 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "vendor_id": 49835 }],
+                                        "type": "device_unless"
+                                    }
+                                ],
                                 "description": "3. ctrl to capslock",
                                 "from": {
                                     "key_code": "left_control",
@@ -35,6 +53,12 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "vendor_id": 49835 }],
+                                        "type": "device_unless"
+                                    }
+                                ],
                                 "description": "right cmd + space to leaderkey",
                                 "from": {
                                     "key_code": "spacebar",
@@ -51,10 +75,42 @@
                         ]
                     },
                     {
-                        "description": "Remap Ctrl+W to Option+Backspace (except Ghostty)",
+                        "description": "Remap Ctrl+W (Ferris Sweep) or Ctrl+R (others) to Option+Backspace (except Ghostty)",
                         "manipulators": [
                             {
                                 "conditions": [
+                                    {
+                                        "identifiers": [{ "vendor_id": 49835 }],
+                                        "type": "device_if"
+                                    },
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.mitchellh\\.ghostty$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "mandatory": ["control"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "vendor_id": 49835 }],
+                                        "type": "device_unless"
+                                    },
                                     {
                                         "bundle_identifiers": [
                                             "^com\\.mitchellh\\.ghostty$"
@@ -83,6 +139,12 @@
                         "description": "Spacebar to Control when held, Space when tapped",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "vendor_id": 49835 }],
+                                        "type": "device_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "spacebar",
                                     "modifiers": { "optional": ["any"] }
@@ -98,6 +160,12 @@
                         "description": "Akimbo cmd to meta s",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "vendor_id": 49835 }],
+                                        "type": "device_unless"
+                                    }
+                                ],
                                 "from": {
                                     "simultaneous": [
                                         { "key_code": "left_command" },
