@@ -508,10 +508,7 @@
                         },
                         {
                             "from": { "key_code": "left_option" },
-                            "to": [
-                                { "sticky_modifier": { "left_command": "toggle" } },
-                                { "key_code": "left_command" }
-                            ]
+                            "to": [{ "key_code": "left_command" }]
                         },
                         {
                             "from": { "key_code": "left_shift" },
@@ -522,10 +519,7 @@
                         },
                         {
                             "from": { "key_code": "right_option" },
-                            "to": [
-                                { "sticky_modifier": { "right_command": "toggle" } },
-                                { "key_code": "right_command" }
-                            ]
+                            "to": [{ "key_code": "right_command" }]
                         },
                         {
                             "from": { "key_code": "right_shift" },
