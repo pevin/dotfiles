@@ -29,6 +29,26 @@
                                         "type": "device_unless"
                                     }
                                 ],
+                                "description": "escape command to tilde command",
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "vendor_id": 49835 }],
+                                        "type": "device_unless"
+                                    }
+                                ],
                                 "description": "2. Caps Lock to Escape",
                                 "from": {
                                     "key_code": "caps_lock",
@@ -456,7 +476,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "tab",
+                                    "key_code": "caps_lock",
                                     "modifiers": { "mandatory": ["command"] }
                                 },
                                 "to": [
