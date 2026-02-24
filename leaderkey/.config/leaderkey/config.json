@@ -1,7 +1,7 @@
 {
   "actions" : [
     {
-      "key" : "space",
+      "key" : "t",
       "type" : "application",
       "value" : "/Applications/Ghostty.app"
     },
@@ -58,9 +58,9 @@
           "value" : "raycast://extensions/raycast/window-management/maximize"
         },
         {
-          "key" : "w",
-          "type" : "command",
-          "value" : ""
+          "key" : "i",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/last-third"
         }
       ],
       "key" : "w",
@@ -100,6 +100,16 @@
           "key" : "v",
           "type" : "application",
           "value" : "/Applications/Vial.app"
+        },
+        {
+          "key" : "k",
+          "type" : "application",
+          "value" : "/Applications/Karabiner-Elements.app"
+        },
+        {
+          "key" : "n",
+          "type" : "application",
+          "value" : "/Applications/Notion.app"
         }
       ],
       "key" : "l",
@@ -170,12 +180,12 @@
           "value" : "shortcuts://run-shortcut?name=30%20mins%20timer"
         }
       ],
-      "key" : "t",
+      "key" : "d",
       "label" : "timer",
       "type" : "group"
     },
     {
-      "key" : "/",
+      "key" : "z",
       "type" : "application",
       "value" : "/Applications/Leader Key.app"
     },
