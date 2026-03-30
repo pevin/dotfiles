@@ -1,0 +1,35 @@
+# Pastel Dawn — Ghostty theme
+# https://github.com/pevin/pastel-dawn
+#
+# Install: copy this file to ~/.config/ghostty/themes/pastel-dawn
+# then add to your Ghostty config:
+#   theme = pastel-dawn
+
+background = #faf6f0
+foreground = #4c4f69
+
+cursor-color = #b4637a
+cursor-text  = #faf6f0
+
+selection-background = #e8ddd1
+selection-foreground = #4c4f69
+
+# ANSI Normal (0-7)
+palette = 0=#e8e0d6
+palette = 1=#b4637a
+palette = 2=#547c47
+palette = 3=#9a7032
+palette = 4=#3568b2
+palette = 5=#7c5cad
+palette = 6=#2b7d84
+palette = 7=#4c4f69
+
+# ANSI Bright (8-15)
+palette = 8=#cfc5b8
+palette = 9=#c94f5e
+palette = 10=#5e9a4d
+palette = 11=#b8932a
+palette = 12=#4a7ecc
+palette = 13=#9472c4
+palette = 14=#379a9f
+palette = 15=#6c6f85
