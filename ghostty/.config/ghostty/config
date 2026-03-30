@@ -1,4 +1,4 @@
-theme = nord
+theme = pastel-dawn
 font-family = "FiraCode Nerd Font"
 font-size = 16
 font-thicken = true
@@ -9,3 +9,4 @@ shell-integration-features = no-cursor
 mouse-hide-while-typing = true
 
 keybind = ctrl+alt+shift+n=reload_config
+keybind = shift+enter=text:\x1b\r
