@@ -45,4 +45,5 @@ vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- Separate Vim plugins fro
 vim.o.guicursor =
   'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175'
 vim.o.list = true
-vim.o.listchars = 'tab:▷ ,trail:·,space:·,extends:◣,precedes:◢,nbsp:○'
+vim.o.listchars = 'tab:▷ ,trail:·,extends:◣,precedes:◢,nbsp:○'
+-- vim.o.listchars = 'tab:▷ ,trail:·,space:·,extends:◣,precedes:◢,nbsp:○'
