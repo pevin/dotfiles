@@ -1,6 +1,5 @@
 return {
   "pevin/pastel-dawn",
-  dir = vim.fn.expand("~/projects/pastel-dawn"),  -- load from local for development; remove to use GitHub
   lazy = false,
   priority = 1001,
   config = function()
