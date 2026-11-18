@@ -40,8 +40,8 @@ require('lazy').setup {
   require 'plugins.vim-test',
   require 'plugins.supermaven',
   require 'plugins.markdown',
-  -- require 'plugins.colortheme',
-  require 'plugins.pasteldawn',
+  require 'plugins.colortheme', -- trying nordfox; revert to pasteldawn below
+  -- require 'plugins.pasteldawn',
   -- require 'plugins.pastleday',
 }
 
